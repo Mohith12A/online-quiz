@@ -1,0 +1,58 @@
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #0f172a, #6b21a8);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            text-decoration: none; /* Removes underline */
+            display: inline-block; /* Ensures proper button shape */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-signup {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .btn-login {
+            background-color: #111;
+            color: white;
+        }
+        
+
+        .btn:hover {
+            opacity: 0.8;
+        }

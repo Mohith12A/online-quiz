@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Soft purple & blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+/* Form Container */
+.login-container {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border: 2px solid #6a11cb; /* Purple focus effect */
+    box-shadow: 0px 0px 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Buttons */
+button {
+    background: #ff6b6b; /* Soft red */
+    color: white;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff4757; /* Darker red */
+    box-shadow: 0px 4px 12px rgba(255, 71, 87, 0.5);
+}
+
+/* Link (Sign up / Login) */
+p {
+    margin-top: 14px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+p a {
+    color: #6a11cb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #2575fc;
+}

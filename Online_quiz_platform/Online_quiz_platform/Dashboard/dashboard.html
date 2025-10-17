@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Dashboard</title>
+    <!-- Force full screen on load -->
+    <script>
+        document.documentElement.requestFullscreen = document.documentElement.requestFullscreen ||
+            document.documentElement.mozRequestFullScreen ||
+            document.documentElement.webkitRequestFullScreen ||
+            document.documentElement.msRequestFullscreen;
+
+        window.onload = function () {
+            // Try to request fullscreen on page load
+            try {
+                document.documentElement.requestFullscreen();
+            } catch (e) {
+                console.log("Could not enter fullscreen mode:", e);
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <div class="profile">
+                <img src="https://via.placeholder.com/60" alt="Profile Picture">
+                <div>
+                    <h2>John Doe</h2>
+                    <p>johndoe@example.com</p>
+                </div>
+            </div>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark</span>
+            </button>
+        </div>
+
+        <div class="stats-row">
+            <div class="card">
+                <h3>Quizzes Attempted</h3>
+                <p>12</p>
+            </div>
+            <div class="card">
+                <h3>Average Score</h3>
+                <p>76%</p>
+            </div>
+            <div class="card streak-card">
+                <i class="fas fa-fire"></i>
+                <h3>Current Streak</h3>
+                <p>5 days</p>
+            </div>
+        </div>
+
+        <div class="solving-meter">
+            <h3>Solving Progress</h3>
+            <div class="chart-container">
+                <canvas id="solvingChart"></canvas>
+            </div>
+            <p><strong>Progress</strong>: Based on correct answers / total attempted questions</p>
+        </div>
+
+        <div class="difficulty-levels">
+            <div class="difficulty-card easy">
+                <h4>Easy</h4>
+                <p>49</p>
+            </div>
+            <div class="difficulty-card medium">
+                <h4>Medium</h4>
+                <p>8</p>
+            </div>
+            <div class="difficulty-card hard">
+                <h4>Hard</h4>
+                <p>1</p>
+            </div>
+        </div>
+
+        <div class="quizzes-container">
+            <div class="quizzes-section">
+                <h3>Recent Quizzes</h3>
+                <ul>
+                    <li>Data Structures - Yesterday</li>
+                    <li>SQL Queries - April 2</li>
+                    <li>Computer Networks - April 1</li>
+                    <li>Web Security - March 29</li>
+                </ul>
+            </div>
+
+            <div class="quizzes-section">
+                <h3>Upcoming Quizzes</h3>
+                <ul>
+                    <li class="upcoming-quiz">
+                        <span>JavaScript Basics</span>
+                        <span class="date">April 5</span>
+                    </li>
+                    <li class="upcoming-quiz">
+                        <span>Python Advanced</span>
+                        <span class="date">April 7</span>
+                    </li>
+                    <li class="upcoming-quiz">
+                        <span>System Design</span>
+                        <span class="date">April 10</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="achievements">
+            <h3>Achievements</h3>
+            <div class="badges">
+                <div class="badge">
+                    <div class="badge-icon gold">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="badge-name">Perfect Score</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon silver">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="badge-name">Speed Demon</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon bronze">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="badge-name">5-Day Streak</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="badge-name">Quiz Master</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="badge-name">Hard Mode</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
